@@ -37,7 +37,11 @@ object TestBasics {
     P(adder2(1)(2)) //两个括号的表示方法
     P(useMap("5","6"))
     P(new BasicsClass("hewei").HE) //面向表达式
+    P(TestBasics())  //apply
+    P(TestBasics.apply())
   }
+
+  def apply()="hewei"
 
   def addOne(m: Int): Int = m + 1
 
