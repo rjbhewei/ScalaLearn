@@ -1,5 +1,7 @@
 package com.hewei.basics
 
+import com.hewei.basics.{NoRun, BasicsClass}
+
 /**
   *
   * @author hewei
@@ -39,9 +41,10 @@ object TestBasics {
     P(new BasicsClass("hewei").HE) //面向表达式
     P(TestBasics())  //apply
     P(TestBasics.apply())
+    val NR=new NoRun
   }
 
-  def apply()="hewei"
+  def apply()=new NoRun()
 
   def addOne(m: Int): Int = m + 1
 
