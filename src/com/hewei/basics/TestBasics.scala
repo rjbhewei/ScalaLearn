@@ -36,7 +36,7 @@ object TestBasics {
     P(add2(2))
     P(adder2(1)(2)) //两个括号的表示方法
     P(useMap("5","6"))
-    P(new BasicsClass("hewei").HE)
+    P(new BasicsClass("hewei").HE) //面向表达式
   }
 
   def addOne(m: Int): Int = m + 1
@@ -56,5 +56,6 @@ object TestBasics {
       arg => arg.capitalize
     )
   }
+
 
 }
