@@ -1,6 +1,5 @@
 package com.hewei.basics
 
-import com.hewei.basics.{NoRun, BasicsClass}
 
 /**
   *
@@ -42,6 +41,9 @@ object TestBasics {
     P(TestBasics())  //apply
     P(TestBasics.apply())
     val NR=new NoRun
+    P(matchX(1))
+    P(matchY(3))
+    P(matchY("3"))
   }
 
   def apply()=new NoRun()
@@ -62,6 +64,22 @@ object TestBasics {
     args.map(
       arg => arg.capitalize
     )
+  }
+
+  def matchX(x: Int) = {
+    x match {
+      case 1 => 1
+      case _ => 10000
+    }
+  }
+
+  def matchY(x:Any)={
+    x match {
+      case m :Int if m==1 =>1
+      case m :Int if m==2 =>2
+      case m :Int =>10
+      case _ => 10000
+    }
   }
 
 
