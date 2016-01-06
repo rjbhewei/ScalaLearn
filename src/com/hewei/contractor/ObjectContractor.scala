@@ -14,17 +14,20 @@ package com.hewei.contractor
   */
 object ObjectContractor {
   def main(args: Array[String]) {
-    def a = new TestContractor(1, 2)
-    def b = new TestContractor()
+    def a = new TestContractor()
+    val b = new TestContractor()
     println(b.getXx)
     b.setXx(10)
     println(b.getXx)
-
-    While(p = 1 < 2, {
-       println("aa"); Thread sleep 1000
-    })
-
+    println(a.getXx)
+    b.setXx(10)
+    println(a.getXx)
   }
+
+  def xx() = While(p = 1 < 2, {
+    println("aa")
+    Thread sleep 1000
+  })
 
   def While(p: => Boolean, s: => Unit) {
     if (p) {
