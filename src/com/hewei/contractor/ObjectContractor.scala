@@ -19,5 +19,17 @@ object ObjectContractor {
     println(b.getXx)
     b.setXx(10)
     println(b.getXx)
+
+    While(p = 1 < 2, {
+       println("aa"); Thread sleep 1000
+    })
+
+  }
+
+  def While(p: => Boolean, s: => Unit) {
+    if (p) {
+      s
+      while (p) s
+    }
   }
 }
