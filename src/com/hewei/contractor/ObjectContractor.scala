@@ -16,12 +16,12 @@ object ObjectContractor {
   def main(args: Array[String]) {
     def a = new TestContractor()
     val b = new TestContractor()
-    println(b.getXx)
+    println(b.getXx)    //1
     b.setXx(10)
-    println(b.getXx)
-    println(a.getXx)
+    println(b.getXx)    //10
+    println(a.getXx)    //1
     b.setXx(10)
-    println(a.getXx)
+    println(a.getXx)    //1
   }
 
   def xx() = While(p = 1 < 2, {
