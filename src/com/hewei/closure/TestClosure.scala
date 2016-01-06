@@ -34,7 +34,7 @@ object TestClosure {
     while (true) {
       //fn
       fn()
-      Thread.sleep(1000)
+      Thread sleep 1000
     }
   }
 
