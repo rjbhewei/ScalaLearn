@@ -1,5 +1,7 @@
 package com.hewei.contractor
 
+import java.net.URL
+
 
 /**
   *
@@ -22,6 +24,14 @@ object ObjectContractor {
     println(a.getXx)    //1
     b.setXx(10)
     println(a.getXx)    //1
+  }
+
+  val url = try {
+    new URL("ooxx")
+  } catch {
+    case ex: Exception =>
+      new URL("https://www.baidu.com")
+      println("case exception")
   }
 
   def xx() = While(p = 1 < 2, {
