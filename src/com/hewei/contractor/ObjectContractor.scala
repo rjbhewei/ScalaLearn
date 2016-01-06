@@ -16,5 +16,8 @@ object ObjectContractor {
   def main(args: Array[String]) {
     def a = new TestContractor(1, 2)
     def b = new TestContractor()
+    println(b.getXx)
+    b.setXx(10)
+    println(b.getXx)
   }
 }

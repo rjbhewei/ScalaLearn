@@ -11,7 +11,13 @@ package com.hewei.contractor
   * @desc
   *
   */
-class TestContractor(xx: Int, oo: Int) {
+class TestContractor(var xx: Int, oo: Int) {
+
   def this(xx: Int) = this(xx, 1)
-  def this()=this(1)
+
+  def this() = this(1)
+
+  def getXx = xx
+
+  def setXx(value: Int) = xx = value
 }
