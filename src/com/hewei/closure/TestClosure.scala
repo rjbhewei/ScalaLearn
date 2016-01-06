@@ -20,6 +20,8 @@ object TestClosure {
     }
   }
 
+  def +() {}
+
   def main(args: Array[String]) = {
     //    oncePerSecond()  //正常使用
     //    oncePerSecond(timeFlies) //闭包
