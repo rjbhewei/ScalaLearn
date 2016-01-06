@@ -19,6 +19,7 @@ object TestRange {
     f0r(1 to 10)
     f0r(1 to(10, 2))
     f0r(new Inclusive(1, 10, 2))
+    for2()
   }
 
   def f0r(xx: Range.Inclusive): Unit = {
@@ -27,4 +28,16 @@ object TestRange {
     }
     println()
   }
+
+  def log(i : Int) : Boolean = {
+    print(i)
+    true
+  }
+
+  def for2(): Unit = {
+    for (i <- 1 to 10; if log(i); xx = ""; if (i % 2) == 0)
+      print(i + xx)
+    println()
+  }
+
 }
