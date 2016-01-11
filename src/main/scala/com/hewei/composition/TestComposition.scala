@@ -19,7 +19,7 @@ object TestComposition {
     case _ => "other"
   }
   val matchX = one orElse other
-  val matchY = one.orElse(other);
+  val matchY = one.orElse(other)
 
   def main(args: Array[String]) {
     P(f(g("hewei")))
