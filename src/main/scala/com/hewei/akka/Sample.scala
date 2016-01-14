@@ -28,9 +28,10 @@ object Sample extends App {
 
   override def main(args: Array[String]) {
     val system = ActorSystem("System")
-    val x = new WordCounterActor(file)
-    println(x)
-    val actor = system.actorOf(Props(new WordCounterActor(file)))
+//    val x = new WordCounterActor(file)
+//    println(x)
+//    val actor = system.actorOf(Props(new WordCounterActor(file)))
+    val actor = system.actorOf(Props(classOf[WordCounterActor], file), name="haha")
     implicit val timeout = Timeout(25 seconds)
     val future = actor ? StartProcessFileMsg()
     future.map { result =>

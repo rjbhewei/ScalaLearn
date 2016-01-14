@@ -1,8 +1,5 @@
 package com.hewei.file
 
-import java.io.File
-
-import com.hewei.akka.WordCounterActor
 
 import scala.io.Source
 

@@ -20,8 +20,6 @@ case class StartProcessFileMsg()
 
 class WordCounterActor(filename: String) extends Actor {
 
-  def WordCounterActor(){}
-
   private var running = false
   private var totalLines = 0
   private var linesProcessed = 0
