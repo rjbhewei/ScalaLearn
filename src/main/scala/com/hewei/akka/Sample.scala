@@ -32,7 +32,7 @@ object Sample {
     val future = actor ? StartProcessFileMsg()
     future.map { result =>
       println("Total number of words " + result)
-      system.shutdown
+      system.terminate
     }
   }
 }
