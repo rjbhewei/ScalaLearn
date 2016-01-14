@@ -16,9 +16,9 @@ import akka.actor.{Actor, Props, ActorRef, ActorSystem}
 object Hello3 extends App {
 
   import Greeter._
-  val system = ActorSystem("actor-demo-scala")
-  val bob = system.actorOf(props("Bob", "Howya doing"))
-  val alice = system.actorOf(props("Alice", "Happy to meet you"))
+  val system = ActorSystem("scala")
+  val bob = system.actorOf(props("he", "xxxxxxx"))
+  val alice = system.actorOf(props("wei", "ooooooo"))
   bob ! Greet(alice)
   alice ! Greet(bob)
   Thread sleep 1000

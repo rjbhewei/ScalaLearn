@@ -18,14 +18,14 @@ object Hello2 extends App {
   case class Greeting(greet: String)
   case class Greet(name: String)
 
-  val system = ActorSystem("actor-demo-scala")
+  val system = ActorSystem("scala")
   val hello = system.actorOf(Props[Hello], "hello")
   hello ! Greeting("Hello+++++")
-  hello ! Greet("Bob")
-  hello ! Greet("Alice")
+  hello ! Greet("xx")
+  hello ! Greet("oo")
   hello ! Greeting("hello----")
-  hello ! Greet("Alice")
-  hello ! Greet("Bob")
+  hello ! Greet("yyyy")
+  hello ! Greet("zzzz")
   Thread sleep 1000
   system terminate()
 
