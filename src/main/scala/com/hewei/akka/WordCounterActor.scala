@@ -30,18 +30,10 @@ class WordCounterActor(filename: String) extends Actor {
 
     case StartProcessFileMsg() => {
       if (running) {
-        // println just used for example purposes;
-        // Akka logger should be used instead
         println("Warning: duplicate start message received")
       } else {
         running = true
         fileSender = Some(sender) // save reference to process invoker
-        println(filename+"++")
-
-        Source.fromFile(filename).getLines.foreach {
-          line => println(line+"--")
-        }
-
         Source.fromFile(filename).getLines.foreach { line =>
           println("wordActor:"+line)
           context.actorOf(Props[StringCounterActor]) ! ProcessStringMsg(line)

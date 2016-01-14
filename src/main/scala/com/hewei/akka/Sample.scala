@@ -14,7 +14,7 @@ import akka.actor.{Props, ActorSystem}
   * @desc
   *
   */
-object Sample extends App {
+object Sample {
 
   import akka.util.Timeout
   import scala.concurrent.duration._
@@ -23,15 +23,11 @@ object Sample extends App {
 
   implicit val ec = global
 
-//  val file="/Users/colin/work/logHtml/index.html"
-  val file="/Users/colin/work/111"
+  val file = "/Users/colin/work/111"
 
-  override def main(args: Array[String]) {
+  def main(args: Array[String]) {
     val system = ActorSystem("System")
-//    val x = new WordCounterActor(file)
-//    println(x)
-//    val actor = system.actorOf(Props(new WordCounterActor(file)))
-    val actor = system.actorOf(Props(classOf[WordCounterActor], file), name="haha")
+    val actor = system.actorOf(Props(classOf[WordCounterActor], file), name = "haha")
     implicit val timeout = Timeout(25 seconds)
     val future = actor ? StartProcessFileMsg()
     future.map { result =>
